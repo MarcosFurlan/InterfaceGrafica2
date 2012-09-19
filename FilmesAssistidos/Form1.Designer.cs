@@ -28,6 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Ação", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Aventura", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Comédia", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Terror", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Suspense", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Documentário", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Infantil", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Ficção Científica", System.Windows.Forms.HorizontalAlignment.Left);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -103,6 +111,7 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
+            "",
             "Ação",
             "Aventura",
             "Comédia",
@@ -179,6 +188,32 @@
             this.colGenero,
             this.colData,
             this.colLocal});
+            this.listView1.FullRowSelect = true;
+            listViewGroup1.Header = "Ação";
+            listViewGroup1.Name = "Acao";
+            listViewGroup2.Header = "Aventura";
+            listViewGroup2.Name = "Aventura";
+            listViewGroup3.Header = "Comédia";
+            listViewGroup3.Name = "Comedia";
+            listViewGroup4.Header = "Terror";
+            listViewGroup4.Name = "Terror";
+            listViewGroup5.Header = "Suspense";
+            listViewGroup5.Name = "Suspense";
+            listViewGroup6.Header = "Documentário";
+            listViewGroup6.Name = "Documentario";
+            listViewGroup7.Header = "Infantil";
+            listViewGroup7.Name = "Infantil";
+            listViewGroup8.Header = "Ficção Científica";
+            listViewGroup8.Name = "FiccaoCientifica";
+            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3,
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8});
             this.listView1.Location = new System.Drawing.Point(12, 162);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(832, 208);

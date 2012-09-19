@@ -7,11 +7,19 @@ namespace FilmesAssistidos
 {
      class FilmeA
     {
-        string[] Nome = new string[30];
-        string[] Genero = new string[30];
-        string[] Data = new string[30];
-        string[] Local = new string[30];
+        
+        public string Nome;
+        public string Genero;
+        public string Data;
+        public string Local;
+
+         public FilmeA(string Nome, string Genero, string Data, string Local)
+         {
+             this.Nome = Nome;
+             this.Genero = Genero;
+             this.Data = Data;
+             this.Local = Local;
+         }
     }
-
-
+   
 }
