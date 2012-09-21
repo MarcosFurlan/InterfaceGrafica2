@@ -172,6 +172,7 @@
             this.button3.TabIndex = 11;
             this.button3.Text = "Alterar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -215,12 +216,14 @@
             listViewGroup6,
             listViewGroup7,
             listViewGroup8});
+            this.listView1.LabelEdit = true;
             this.listView1.Location = new System.Drawing.Point(12, 162);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(832, 208);
             this.listView1.TabIndex = 13;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // colFilme
             // 

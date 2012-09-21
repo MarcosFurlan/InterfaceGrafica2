@@ -13,6 +13,8 @@ namespace FilmesAssistidos
     public partial class Form1 : Form
     {
         Dictionary<string, List<FilmeA>> dic = new Dictionary<string, List<FilmeA>>();
+        ListViewItem Item = new ListViewItem();
+        
         public Form1()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace FilmesAssistidos
             Item.SubItems.Add(comboBox1.Text);
             Item.SubItems.Add(data);
             Item.SubItems.Add(txtLocal.Text);
-            Item.Group = listView1.Groups[comboBox1.SelectedIndex - 1];
+            Item.Group = listView1.Groups[comboBox1.SelectedIndex -1];
 
             if (dic.ContainsKey(comboBox1.Text))
             {
@@ -61,8 +63,26 @@ namespace FilmesAssistidos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+           
             listView1.Items[0].Remove();
+
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+           if (listView1.SelectedItems.Count > 0)
+           
+            listView1.SelectedItems[0].BeginEdit();
+        }
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+
+            if (listView1.SelectedItems.Count > 0)
+
+                listView1.SelectedItems[0].BeginEdit();
+                
         }
     }
 }
