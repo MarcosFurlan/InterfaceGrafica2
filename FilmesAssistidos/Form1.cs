@@ -63,8 +63,20 @@ namespace FilmesAssistidos
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
-            listView1.Items[0].Remove();
+            foreach(ListViewItem listItem in listView1.SelectedItems)
+            {
+            foreach (KeyValuePair<string, List<FilmeA>> ChaveValor in dic)
+            {
+                
+
+                if(ChaveValor.Value ==  )
+                {
+                }
+
+    
+            }
+                listView1.Items.Remove(listItem);
+            }
 
             
         }
