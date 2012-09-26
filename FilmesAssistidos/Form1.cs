@@ -63,37 +63,51 @@ namespace FilmesAssistidos
 
         private void button2_Click(object sender, EventArgs e)
         {
-            foreach(ListViewItem listItem in listView1.SelectedItems)
+            foreach (ListViewItem listItem in listView1.SelectedItems)
             {
-            foreach (KeyValuePair<string, List<FilmeA>> ChaveValor in dic)
-            {
-                
-
-                if(ChaveValor.Value ==  )
+                foreach (KeyValuePair<string, List<FilmeA>> ChaveValor in dic)
                 {
+
+
+                    //if (ChaveValor.Value == )
+                    //{
+                    //}
+
+
                 }
-
-    
-            }
                 listView1.Items.Remove(listItem);
-            }
 
+            }
             
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-           if (listView1.SelectedItems.Count > 0)
-           
-            listView1.SelectedItems[0].BeginEdit();
+            if (listView1.SelectedItems.Count > 0)
+            {
+                txtFilme.Text = listView1.SelectedItems[0].Text;
+                listView1.SelectedItems[0].BeginEdit();
+                listView1.SelectedItems[0].Remove();
+
+
+
+            }
         }
 
         private void listView1_DoubleClick(object sender, EventArgs e)
         {
 
             if (listView1.SelectedItems.Count > 0)
-
+            {
+                txtFilme.Text = listView1.SelectedItems[0].Text;
                 listView1.SelectedItems[0].BeginEdit();
+                listView1.SelectedItems[0].Remove();
+                
+
+
+            }
+
+            
                 
         }
     }
