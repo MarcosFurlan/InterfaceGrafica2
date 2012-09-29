@@ -14,9 +14,8 @@ namespace FilmesAssistidos
     {
         Dictionary<string, List<FilmeA>> dic = new Dictionary<string, List<FilmeA>>();
         ListViewItem Item = new ListViewItem();
-        string EditarFilme;
-        int EditarGenero;
-        DateTime EditarData;
+        string EditarNome;
+        string EditarGenero;
         string EditarLocal;
         
         
@@ -31,9 +30,8 @@ namespace FilmesAssistidos
         {
             
 
-           // DateTime DT = DateTime.ParseExact(dateTimePicker1.Text, "dd / MM / aaaa", null);
-           // DateTime data = dateTimePicker1.Value;
-            FilmeA pegar = new FilmeA(txtFilme.Text, comboBox1.Text ,  dateTimePicker1.Text , txtLocal.Text);
+           
+            FilmeA pegar = new FilmeA(txtFilme.Text, comboBox1.Text,  dateTimePicker1.Text , txtLocal.Text);
 
              
             ListViewItem Item = new ListViewItem(txtFilme.Text);
@@ -72,17 +70,23 @@ namespace FilmesAssistidos
         {
             foreach (ListViewItem listItem in listView1.SelectedItems)
             {
-                foreach (KeyValuePair<string, List<FilmeA>> ChaveValor in dic)
+               
+
+                string Nome = listItem.Text;
+                string Genero = listItem.Group.Header;
+                List<FilmeA> LFilme = dic[Genero];
+                for (int i = 0; i < LFilme.Count; i++)
                 {
+                    if (LFilme[i].Nome == listItem.Text)
+                    {
+                        LFilme.RemoveAt(i);
+                       // dic.Remove(Genero);
+                        i--;
+                    
 
-
-                    //if (ChaveValor.Value == )
-                    //{
-                    //}
-
-
+                    }
+                    listView1.Items.Remove(listItem);
                 }
-                listView1.Items.Remove(listItem);
 
             }
             
@@ -97,12 +101,21 @@ namespace FilmesAssistidos
 
                 foreach (FilmeA PercorreObjeto in ValoresDicionario)
                 {
-                    if (PercorreObjeto.Nome == EditarFilme && PercorreObjeto.Genero == EditarGenero && PercorreObjeto.Local == EditarLocal && PercorreObjeto.Data == EditarData.ToShortDateString())
+                    if (PercorreObjeto.Nome == EditarNome && PercorreObjeto.Genero == EditarGenero && PercorreObjeto.Local == EditarLocal)
                     {
+                        
                         PercorreObjeto.Nome = txtFilme.Text;
                         PercorreObjeto.Genero = comboBox1.Text;
                         PercorreObjeto.Data = dateTimePicker1.Text;
                         PercorreObjeto.Local = txtLocal.Text;
+
+
+                        txtFilme.Focus();
+                        txtFilme.Text = "";
+                        comboBox1.Text = "";
+                        txtLocal.Text = "";
+                        MessageBox.Show("Alterado com Sucesso", "Parabéns");
+
                     }
                 }
             }
@@ -116,11 +129,11 @@ namespace FilmesAssistidos
                 txtFilme.Text = SelecionaFilme.Text;
                 comboBox1.Text = SelecionaFilme.Group.Header;
                // dateTimePicker1 = SelecionaFilme.SubItems[1].Text;
-                txtLocal.Text = SelecionaFilme.SubItems[2].Text;
-                EditarFilme = SelecionaFilme.Text;
+                txtLocal.Text = SelecionaFilme.SubItems[3].Text;
+                EditarNome = SelecionaFilme.Text;
                // EditarData = Convert.ToDateTime(SelecionaFilme.SubItems[1].Text);
-                EditarGenero = listView1.Groups.IndexOf(SelecionaFilme.Group);
-                EditarLocal = SelecionaFilme.SubItems[2].Text;
+                EditarGenero = SelecionaFilme.SubItems[1].Text; ;
+                EditarLocal = SelecionaFilme.SubItems[3].Text;
             }
 
             
