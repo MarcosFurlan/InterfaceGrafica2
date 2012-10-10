@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Ação", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Aventura", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Comédia", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("Terror", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("Suspense", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup17 = new System.Windows.Forms.ListViewGroup("Documentário", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup18 = new System.Windows.Forms.ListViewGroup("Infantil", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup19 = new System.Windows.Forms.ListViewGroup("LVRomance", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup20 = new System.Windows.Forms.ListViewGroup("Ficção Científica", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Ação", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Aventura", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Comédia", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Terror", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Suspense", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Documentário", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Infantil", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("LVRomance", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Ficção Científica", System.Windows.Forms.HorizontalAlignment.Left);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -149,7 +149,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(55, 131);
+            this.button1.Location = new System.Drawing.Point(12, 132);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 25);
             this.button1.TabIndex = 9;
@@ -159,7 +159,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(153, 131);
+            this.button2.Location = new System.Drawing.Point(110, 132);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 25);
             this.button2.TabIndex = 10;
@@ -169,7 +169,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(251, 131);
+            this.button3.Location = new System.Drawing.Point(208, 132);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(92, 25);
             this.button3.TabIndex = 11;
@@ -179,7 +179,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(349, 131);
+            this.button4.Location = new System.Drawing.Point(306, 132);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 25);
             this.button4.TabIndex = 12;
@@ -194,39 +194,39 @@
             this.colData,
             this.colLocal});
             this.listView1.FullRowSelect = true;
-            listViewGroup11.Header = "ListViewGroup";
-            listViewGroup11.Name = "     ";
-            listViewGroup12.Header = "Ação";
-            listViewGroup12.Name = "Acao";
-            listViewGroup13.Header = "Aventura";
-            listViewGroup13.Name = "Aventura";
-            listViewGroup14.Header = "Comédia";
-            listViewGroup14.Name = "Comedia";
-            listViewGroup15.Header = "Terror";
-            listViewGroup15.Name = "Terror";
-            listViewGroup16.Header = "Suspense";
-            listViewGroup16.Name = "Suspense";
-            listViewGroup17.Header = "Documentário";
-            listViewGroup17.Name = "Documentario";
-            listViewGroup18.Header = "Infantil";
-            listViewGroup18.Name = "Infantil";
-            listViewGroup19.Header = "LVRomance";
-            listViewGroup19.Name = "Romance";
-            listViewGroup20.Header = "Ficção Científica";
-            listViewGroup20.Name = "FiccaoCientifica";
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "     ";
+            listViewGroup2.Header = "Ação";
+            listViewGroup2.Name = "Acao";
+            listViewGroup3.Header = "Aventura";
+            listViewGroup3.Name = "Aventura";
+            listViewGroup4.Header = "Comédia";
+            listViewGroup4.Name = "Comedia";
+            listViewGroup5.Header = "Terror";
+            listViewGroup5.Name = "Terror";
+            listViewGroup6.Header = "Suspense";
+            listViewGroup6.Name = "Suspense";
+            listViewGroup7.Header = "Documentário";
+            listViewGroup7.Name = "Documentario";
+            listViewGroup8.Header = "Infantil";
+            listViewGroup8.Name = "Infantil";
+            listViewGroup9.Header = "LVRomance";
+            listViewGroup9.Name = "Romance";
+            listViewGroup10.Header = "Ficção Científica";
+            listViewGroup10.Name = "FiccaoCientifica";
             this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup11,
-            listViewGroup12,
-            listViewGroup13,
-            listViewGroup14,
-            listViewGroup15,
-            listViewGroup16,
-            listViewGroup17,
-            listViewGroup18,
-            listViewGroup19,
-            listViewGroup20});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3,
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8,
+            listViewGroup9,
+            listViewGroup10});
             this.listView1.LabelEdit = true;
-            this.listView1.Location = new System.Drawing.Point(12, 162);
+            this.listView1.Location = new System.Drawing.Point(12, 163);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(832, 208);
             this.listView1.TabIndex = 13;
