@@ -24,13 +24,13 @@ namespace FilmesAssistidos
             InitializeComponent();
 
         }
-        // Métoo para excluir Item do Dicionário e do ListView
+        // Método para excluir Item do Dicionário e do ListView
         public void Excluir()
         {
             foreach (ListViewItem listItem in listView1.SelectedItems)
             {
-
-                string Genero = listItem.SubItems[1].Text;
+                
+                string Genero = listItem.SubItems[1].Text; 
                 List<FilmeA> LFilme = dic[Genero];
                 for (int i = 0; i < LFilme.Count; i++)
                 {
@@ -89,46 +89,52 @@ namespace FilmesAssistidos
 
         // Alterando o Item selecionado 
         private void button3_Click(object sender, EventArgs e)
-        {
+        { 
 
 
-            foreach (List<FilmeA> ValoresDicionario in dic.Values)
-            {
-
-                foreach (FilmeA PercorreObjeto in ValoresDicionario)
+                
+                foreach (List<FilmeA> ValoresDicionario in dic.Values)
                 {
-                    if (PercorreObjeto.Nome == EditarNome && PercorreObjeto.Genero == EditarGenero && PercorreObjeto.Local == EditarLocal)
+
+                    foreach (FilmeA PercorreObjeto in ValoresDicionario)
                     {
-                        Excluir();
-
-                        PercorreObjeto.Nome = txtFilme.Text;
-                        PercorreObjeto.Genero = comboBox1.Text;
-                        PercorreObjeto.Data = dateTimePicker1.Text;
-                        PercorreObjeto.Local = txtLocal.Text;
-
-                        if (dic.ContainsKey(comboBox1.Text))
+                        if (PercorreObjeto.Nome == EditarNome && PercorreObjeto.Genero == EditarGenero && PercorreObjeto.Local == EditarLocal)
                         {
-                            List<FilmeA> ListaIndice = dic[comboBox1.Text];
-                            ListaIndice.Add(PercorreObjeto);
+
+
+                            PercorreObjeto.Nome = txtFilme.Text;
+                            PercorreObjeto.Genero = comboBox1.Text;
+                            PercorreObjeto.Data = dateTimePicker1.Text;
+                            PercorreObjeto.Local = txtLocal.Text;
+
+                            Excluir();
+
+
+                            if (dic.ContainsKey(comboBox1.Text))
+                            {
+                                List<FilmeA> ListaIndice = dic[comboBox1.Text];
+                                ListaIndice.Add(PercorreObjeto);
+
+                            }
+                            else
+                            {
+                                List<FilmeA> passagem = new List<FilmeA>();
+                                passagem.Add(PercorreObjeto);
+                                dic.Add(comboBox1.Text, passagem);
+                            }
+
+                            txtFilme.Focus();
+                            txtFilme.Text = "";
+                            comboBox1.Text = "";
+                            txtLocal.Text = "";
+                            MessageBox.Show("Alterado com Sucesso", "Parabéns");
+                            listView1.Items.AddRange(new ListViewItem[] { Item });
 
                         }
-                        else
-                        {
-                            List<FilmeA> passagem = new List<FilmeA>();
-                            passagem.Add(PercorreObjeto);
-                            dic.Add(comboBox1.Text, passagem);
-                        }
-
-                        txtFilme.Focus();
-                        txtFilme.Text = "";
-                        comboBox1.Text = "";
-                        txtLocal.Text = "";
-                        MessageBox.Show("Alterado com Sucesso", "Parabéns");
-
                     }
                 }
             }
-        }
+        
 
         // Ao Clicar duas vezes sobre o Item permite-se alteração
         private void listView1_DoubleClick(object sender, EventArgs e)
@@ -145,6 +151,11 @@ namespace FilmesAssistidos
             }
 
 
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
 
         }
 
