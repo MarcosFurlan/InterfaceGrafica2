@@ -99,7 +99,7 @@ namespace FilmesAssistidos
             {
                 if ((item.Index % 2) == 0)
                 {
-                    item.BackColor = Color.LightBlue;
+                    item.BackColor = Color.Beige;
                 }
                 else
                 {
@@ -192,6 +192,11 @@ namespace FilmesAssistidos
             labelHora.Text = DateTime.Now.ToShortTimeString();
             labelData.Text = DateTime.Now.ToShortDateString();
             
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
 
     }
