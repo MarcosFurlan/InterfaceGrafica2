@@ -49,6 +49,23 @@ namespace FilmesAssistidos
         // Gravando Itens no dicionário e apresentando no ListView
         private void button1_Click(object sender, EventArgs e)
         {
+            errorProvider1.Clear();
+            if (txtFilme.Text.Trim().Equals(""))
+            {
+                errorProvider1.SetError(txtFilme, "O Nome é obrigatório!");
+                txtFilme.Focus();
+                return;
+                
+            }
+            errorProvider1.Clear();
+            if (comboBox1.Text.Trim().Equals(""))
+            {
+                errorProvider1.SetError(comboBox1, "O Gênero é obrigatório!");
+                txtFilme.Focus();
+                return;
+
+            }
+
             FilmeA pegar = new FilmeA(txtFilme.Text, comboBox1.Text, dateTimePicker1.Text, txtLocal.Text);
 
 
@@ -76,9 +93,19 @@ namespace FilmesAssistidos
             comboBox1.Text = "";
             txtLocal.Text = "";
 
-            MessageBox.Show("Cadastro Realizado com Sucesso", "Parabéns");
-
             listView1.Items.AddRange(new ListViewItem[] { Item });
+
+            foreach (ListViewItem item in listView1.Items)
+            {
+                if ((item.Index % 2) == 0)
+                {
+                    item.BackColor = Color.LightBlue;
+                }
+                else
+                {
+                    item.BackColor = Color.White;
+                }
+            }
         }
 
         // Deletando do ListView e do Dicionário
@@ -157,6 +184,14 @@ namespace FilmesAssistidos
         private void label5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtFilme.Focus();
+            labelHora.Text = DateTime.Now.ToShortTimeString();
+            labelData.Text = DateTime.Now.ToShortDateString();
+            
         }
 
     }
